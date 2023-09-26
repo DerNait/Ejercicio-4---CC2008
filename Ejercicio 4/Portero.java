@@ -9,7 +9,7 @@ public class Portero extends Jugador{
         this.golesRecibidos = golesRecibidos;
 
         if((paradasEfectivas == 0 && golesRecibidos == 0) || totalLanzamientos == 0)
-            efectividad = 0
+            efectividad = 0;
         else
             efectividad = ((paradasEfectivas - golesRecibidos)*100/(paradasEfectivas+golesRecibidos))+golesDirectos*100/totalLanzamientos;
     } 

@@ -1,16 +1,19 @@
-java.util.*;
+import java.util.*;
 
 public class Campeonato{
 
     public static void main(String[] args){
-        ArrayList porteros = new ArrayList<Portero>();
-        ArrayList extremos = new ArrayList<Extremo>();
+        ArrayList<Portero> porteros = new ArrayList<Portero>();
+        ArrayList<Extremo> extremos = new ArrayList<Extremo>();
+
+        Portero portero = new Portero("Kevin", "Guatemala", 5, 9, 13, 7, 3);
+        System.out.println(portero.getEfectividad());
 
         System.out.println("\n=== BIENVENIDO AL PROGRAMA DEL CAMPEONATO INTERNACIONAL DE FUTBOL ===\n");
         registrarJugadores(porteros, extremos);
     }
 
-    public static void registrarJugadores(ArrayList<Portero>() porteros){
+    public static void registrarJugadores(ArrayList<Portero> porteros, ArrayList<Extremo> extremos){
         Scanner scan = new Scanner(System.in);
         String opcion;
 
@@ -22,7 +25,7 @@ public class Campeonato{
 
         switch(opcion){
             case "1":
-                System.out.println("\n=== PORTERO === ")
+                System.out.println("\n=== PORTERO === ");
                 System.out.println("¿Cual es su nombre?");
                 System.out.println("¿De que pais viene?");
                 System.out.println("¿Cuantas faltas tiene?");
@@ -34,7 +37,7 @@ public class Campeonato{
             case "2":
                 break;
             default:
-                System.out.println("Ingrese un valor valido entre 1 y 2.")
+                System.out.println("Ingrese un valor valido entre 1 y 2.");
                 break;
         }
     }
